@@ -10,21 +10,26 @@ const StyledInfo = styled.div`
   margin: 3rem 0px;
 `
 const StyledImg = styled.div`
-  width: 60%;
+  width: 55%;
 `
 const StyledContent = styled.div`
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
   color: rgb(45, 45, 45);
-  padding: 5rem;
+  padding: 6rem;
 `
 
 const StyledHeading = styled.h3`
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 36px;
 `
 
 const StyledParagraph = styled.p`
-  margin-top: 25px;
+  margin-top: 15px;
+  font-size: 20px;
+  line-height: 30px;
 `
 
 const Info = ({ title, content, image, contentRight }) => {
@@ -34,12 +39,9 @@ const Info = ({ title, content, image, contentRight }) => {
         <Img fluid={image} />
       </StyledImg>
       <StyledContent>
-        <StyledHeading>How we started {title}</StyledHeading>
+        <StyledHeading>{title}</StyledHeading>
         <StyledParagraph>
-          We started Chattr™ to do our part in solving the Home Healthcare
-          recruiting crisis. Sterile applications, inefficient processes and
-          alack of transparency only compound the challenges of finding and
-          hiring top quality candidates.
+          {content}
         </StyledParagraph>
       </StyledContent>
     </StyledInfo>

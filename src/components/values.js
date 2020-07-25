@@ -72,13 +72,20 @@ const StyledValuesContainer = styled.div`
   flex-wrap: wrap;
 `
 
+const StyledValuesWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 1470px;
+  padding-left: 15px;
+  padding-rigth: 15px;
+`
+
 const Values = () => (
   <StyledValues>
     <StyledHeading>
       Let’s hire more <span>humanly</span> together.
     </StyledHeading>
     <StyledValuesBanner imgUrl={ValuesImg}>
-      <div>
+      <StyledValuesWrapper>
         <h1>Our Values</h1>
         <StyledValuesContainer>
           <Value />
@@ -88,7 +95,7 @@ const Values = () => (
           <Value />
           <Value />
         </StyledValuesContainer>
-      </div>
+      </StyledValuesWrapper>
     </StyledValuesBanner>
   </StyledValues>
 )

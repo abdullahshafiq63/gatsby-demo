@@ -39,7 +39,8 @@ const StyledValue = styled.div`
 `
 
 const StyledImage = styled.div`
-  width: 75px;
+  width: 80px;
+  display: inline-block;
 `
 
 const Value = () => {

@@ -36,6 +36,8 @@ const StyledFooter = styled.footer`
 const StyledFooterWrapper = styled.div`
   position: relative;
   z-index: 55;
+  margin: 0 auto;
+  max-width: 1470px;
 `
 
 const StyledFooterTop = styled.div`
@@ -84,6 +86,10 @@ const StyledFooterAddress = styled.div`
 const StyledFooterSocial = styled.div`
   padding-top: 2rem;
   display: inline-flex;
+
+  ul {
+    display: inline-flex;
+  }
 
   span {
     width: 35px;

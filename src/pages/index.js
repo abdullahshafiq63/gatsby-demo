@@ -8,7 +8,10 @@ import Info from "../components/info"
 import Values from "../components/values"
 
 const StyledInfoContainer = styled.div`
-  padding: 0px 7%;
+  margin: 0 auto;
+  max-width: 1470px;
+  padding-left: 15px;
+  padding-rigth: 15px;
 `
 
 const IndexPage = () => {
@@ -44,9 +47,29 @@ const IndexPage = () => {
     <Layout>
       <Banner />
       <StyledInfoContainer>
-        <Info contentRight image={data.first.childImageSharp.fluid} />
-        <Info image={data.second.childImageSharp.fluid} />
-        <Info contentRight image={data.third.childImageSharp.fluid} />
+        <Info
+          contentRight
+          image={data.first.childImageSharp.fluid}
+          title={"How We Started"}
+          content={
+            "We started Chattr™ to do our part in solving the Home Healthcare recruiting crisis. Sterile applications, inefficient processes and a lack of transparency only compound the challenges of finding and hiring top quality candidates."
+          }
+        />
+        <Info
+          image={data.second.childImageSharp.fluid}
+          title={"Empowering Humanity"}
+          content={
+            "We’re using AI automation to empower humanity throughout your recruiting process. This means replacing the mundane with what matters, converting mind-numbing applications to stimulating conversations and turning overwhelmed recruiters into highly efficient talent magnets."
+          }
+        />
+        <Info
+          contentRight
+          image={data.third.childImageSharp.fluid}
+          title={"Creating An Amazing Recruiting Experience"}
+          content={
+            "Our first-of-its-kind home healthcare recruiting platform combines intuitive artificial intelligence, delightful chatbots and a little bit of love to create an amazing experience for both your candidates and your hiring teams. An experience that differentiates your company, attracts higher quality candidates and leads to better hiring decisions."
+          }
+        />
       </StyledInfoContainer>
       <Values />
     </Layout>

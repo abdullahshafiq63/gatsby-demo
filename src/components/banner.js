@@ -29,11 +29,11 @@ const StyledBanner = styled.section`
     content: "";
     position: absolute;
     width: 110%;
-    height: 137px;
+    height: 150px;
     background-color: #fff;
     z-index: 1;
     left: -5%;
-    bottom: -11%;
+    bottom: -12%;
     border-top: 10px solid #b8cefb;
     transform: rotate(4deg);
   }
