@@ -1,22 +1,56 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Banner from "../components/banner"
+import Info from "../components/info"
+import Values from "../components/values"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const StyledInfoContainer = styled.div`
+  padding: 0px 7%;
+`
+
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      first: file(
+        relativePath: { eq: "woman-assisting-patient-in-wheelchair.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      second: file(relativePath: { eq: "christin-hume.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      third: file(relativePath: { eq: "patrick-tomasso.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Layout>
+      <Banner />
+      <StyledInfoContainer>
+        <Info contentRight image={data.first.childImageSharp.fluid} />
+        <Info image={data.second.childImageSharp.fluid} />
+        <Info contentRight image={data.third.childImageSharp.fluid} />
+      </StyledInfoContainer>
+      <Values />
+    </Layout>
+  )
+}
 
 export default IndexPage
