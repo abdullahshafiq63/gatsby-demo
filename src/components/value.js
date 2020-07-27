@@ -14,6 +14,13 @@ const StyledValue = styled.div`
   padding-bottom: 2rem;
   border-right: 1px solid #d3d3d3;
   border-top: 1px solid #d3d3d3;
+  @media (max-width: 991px) {
+    width: 50%;
+    border: 0;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 
   h2 {
     font-size: 28px;

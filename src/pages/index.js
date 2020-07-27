@@ -11,7 +11,7 @@ const StyledInfoContainer = styled.div`
   margin: 0 auto;
   max-width: 1470px;
   padding-left: 15px;
-  padding-rigth: 15px;
+  padding-right: 15px;
 `
 
 const IndexPage = () => {

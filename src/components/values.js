@@ -10,10 +10,12 @@ const StyledHeading = styled.h1`
   color: #2d2d2d;
   font-weight: 700;
   text-align: center;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
   margin: 0;
   font-size: 42px;
-
+  @media (max-width: 480px) {
+    font-size: 32px;
+  }
   span {
     background-color: #2f6ff2;
     padding: 0 1rem;
@@ -54,6 +56,9 @@ const StyledValuesBanner = styled.div`
     top: -6%;
     border-bottom: 10px solid #b8cefb;
     transform: rotate(4deg);
+    @media (max-width: 991px) {
+      top: -3%;
+    }
   }
 
   h1 {
@@ -76,7 +81,7 @@ const StyledValuesWrapper = styled.div`
   margin: 0 auto;
   max-width: 1470px;
   padding-left: 15px;
-  padding-rigth: 15px;
+  padding-right: 15px;
 `
 
 const Values = () => (

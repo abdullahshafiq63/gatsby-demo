@@ -52,6 +52,9 @@ const StyledParagraph = styled.p`
   font-weight: 700;
   position: relative;
   z-index: 2;
+  @media (max-width: 360px) {
+    font-size: 34px;
+  }
 `
 
 const StyledHuman = styled.span`

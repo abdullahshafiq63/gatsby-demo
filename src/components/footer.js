@@ -11,7 +11,7 @@ const StyledFooter = styled.footer`
   overflow: hidden;
   padding-top: 137px;
   margin-top: -145px;
-
+  
   &:before {
     content: "";
     position: absolute;
@@ -38,6 +38,9 @@ const StyledFooterWrapper = styled.div`
   z-index: 55;
   margin: 0 auto;
   max-width: 1470px;
+  @media (max-width: 991px) {
+    padding: 1rem;
+  }
 `
 
 const StyledFooterTop = styled.div`
@@ -116,7 +119,10 @@ const StyledMainFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-
+  @media (max-width: 480px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   p {
     color: #fff;
     margin: 0;

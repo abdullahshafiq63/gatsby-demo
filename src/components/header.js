@@ -3,7 +3,11 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-const StyledHeader = styled.header``
+const StyledHeader = styled.header`
+  @media (max-width: 991px) {
+    display: none;
+  }
+`
 
 const StyledWrapper = styled.div`
   margin: 0 auto;
